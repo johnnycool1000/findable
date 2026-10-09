@@ -1,0 +1,77 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Findable audit — https://www.nytimes.com/section/technology</title>
+<style>
+:root{--bg:#0e1116;--card:#161b24;--txt:#e6e9ef;--mut:#8b93a7;--acc:#35c2a0;--hi:#ff5d5d;--md:#ffab40;--lo:#ffd84d}
+*{box-sizing:border-box}body{margin:0;font:15px/1.6 system-ui,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--txt);padding:32px 16px}
+.wrap{max-width:880px;margin:0 auto}h1{font-size:22px}h2{margin-top:36px;border-bottom:1px solid #242b38;padding-bottom:6px}
+.scores{display:flex;gap:14px;flex-wrap:wrap;margin:20px 0}.ring{background:var(--card);border-radius:14px;padding:16px 22px;text-align:center;min-width:120px}
+.num{font-size:30px;font-weight:700;color:var(--acc)}.lbl{color:var(--mut);font-size:12px}
+.find{background:var(--card);border-radius:12px;padding:14px 18px;margin:12px 0;border-left:4px solid var(--mut)}
+.find.high{border-color:var(--hi)}.find.medium{border-color:var(--md)}.find.low{border-color:var(--lo)}
+.find h3{margin:0 0 6px;font-size:15px}.find .why{color:var(--mut)}
+pre{background:#0a0d12;padding:12px;border-radius:8px;overflow-x:auto;font-size:13px;white-space:pre-wrap}
+table{border-collapse:collapse;width:100%;margin:10px 0}td,th{padding:6px 10px;border-bottom:1px solid #242b38;text-align:left;font-size:14px}
+.tag{display:inline-block;background:#232a38;color:var(--mut);border-radius:20px;padding:2px 10px;font-size:12px;margin-right:6px}
+a{color:var(--acc)}</style></head><body><div class="wrap">
+<h1>Findable audit — https://www.nytimes.com/section/technology</h1>
+<div style="color:var(--mut)">Audited live on 2026-10-09 17:10 UTC · TinyFish Search + Fetch</div>
+<div class="scores"><div class="ring"><div class="num">49 (D)</div><div class="lbl">Overall</div></div><div class="ring"><div class="num">65</div><div class="lbl">AI readability</div></div><div class="ring"><div class="num">0</div><div class="lbl">AI access</div></div><div class="ring"><div class="num">67</div><div class="lbl">Search visibility</div></div></div>
+<h2>What AI tools see</h2>
+<p><span class="tag">raw HTML: 8 words</span><span class="tag">AI extraction: 555 words</span><span class="tag">parity 69.38</span><span class="tag">h1: missing</span><span class="tag">JSON-LD: none</span><span class="tag">blocked AI bots: 14</span></p>
+<h2>Search visibility</h2>
+<h3>target query: “technology news” — not in results</h3><table><tr><th>#</th><th>Result</th><th>Domain</th></tr><tr><td>1</td><td>Tech News | Today's Latest Technology News</td><td>reuters.com</td></tr><tr><td>2</td><td>GeekWire – Breaking News in Technology &amp; Business</td><td>geekwire.com</td></tr><tr><td>3</td><td>TechCrunch | Startup and Technology News</td><td>techcrunch.com</td></tr><tr><td>4</td><td>Tech | CNN Business</td><td>cnn.com</td></tr><tr><td>5</td><td>Google News – Technology – Latest</td><td>news.google.com</td></tr></table><h3>page topic: “nytimes.com” — position 1</h3><table><tr><th>#</th><th>Result</th><th>Domain</th></tr><tr><td>1</td><td>The New York Times - Breaking News, US News, World News ...</td><td>nytimes.com <b>← you</b></td></tr><tr><td>2</td><td>The New York Times International - Breaking News, US News ...</td><td>nytimes.com <b>← you</b></td></tr><tr><td>3</td><td>Today's Paper - The New York Times</td><td>nytimes.com <b>← you</b></td></tr><tr><td>4</td><td>New York Times nytimes.com</td><td>nytimes.com <b>← you</b></td></tr><tr><td>5</td><td>The New York Times (@nytimes) / X</td><td>x.com</td></tr></table><h3>brand: “nytimes” — position 1</h3><table><tr><th>#</th><th>Result</th><th>Domain</th></tr><tr><td>1</td><td>The New York Times - Breaking News, US News, World News ...</td><td>nytimes.com <b>← you</b></td></tr><tr><td>2</td><td>The New York Times (@nytimes) / X</td><td>x.com</td></tr><tr><td>3</td><td>Games | The New York Times Company</td><td>nytco.com</td></tr><tr><td>4</td><td>Connections - The New York Times</td><td>nytimes.com <b>← you</b></td></tr><tr><td>5</td><td>Wordle - The New York Times</td><td>nytimes.com <b>← you</b></td></tr></table>
+
+<h2>Findings &amp; fixes</h2>
+<div class="find high"><h3>HIGH · AI access — robots.txt blocks GPTBot (Disallow: /)</h3><div class="why">GPTBot cannot read this page at all. Pages invisible to an AI crawler can never be cited, summarized, or recommended by that assistant — ranking is irrelevant if the reader is locked out.</div><pre>If the block is unintentional, remove the rule or add:
+
+User-agent: GPTBot
+Allow: /</pre></div><div class="find high"><h3>HIGH · AI access — robots.txt blocks OAI-SearchBot (Disallow: /)</h3><div class="why">OAI-SearchBot cannot read this page at all. Pages invisible to an AI crawler can never be cited, summarized, or recommended by that assistant — ranking is irrelevant if the reader is locked out.</div><pre>If the block is unintentional, remove the rule or add:
+
+User-agent: OAI-SearchBot
+Allow: /</pre></div><div class="find high"><h3>HIGH · AI access — robots.txt blocks ChatGPT-User (Disallow: /)</h3><div class="why">ChatGPT-User cannot read this page at all. Pages invisible to an AI crawler can never be cited, summarized, or recommended by that assistant — ranking is irrelevant if the reader is locked out.</div><pre>If the block is unintentional, remove the rule or add:
+
+User-agent: ChatGPT-User
+Allow: /</pre></div><div class="find high"><h3>HIGH · AI access — robots.txt blocks ClaudeBot (Disallow: /)</h3><div class="why">ClaudeBot cannot read this page at all. Pages invisible to an AI crawler can never be cited, summarized, or recommended by that assistant — ranking is irrelevant if the reader is locked out.</div><pre>If the block is unintentional, remove the rule or add:
+
+User-agent: ClaudeBot
+Allow: /</pre></div><div class="find high"><h3>HIGH · AI access — robots.txt blocks Claude-Web (Disallow: /)</h3><div class="why">Claude-Web cannot read this page at all. Pages invisible to an AI crawler can never be cited, summarized, or recommended by that assistant — ranking is irrelevant if the reader is locked out.</div><pre>If the block is unintentional, remove the rule or add:
+
+User-agent: Claude-Web
+Allow: /</pre></div><div class="find high"><h3>HIGH · AI access — robots.txt blocks Claude-SearchBot (Disallow: /)</h3><div class="why">Claude-SearchBot cannot read this page at all. Pages invisible to an AI crawler can never be cited, summarized, or recommended by that assistant — ranking is irrelevant if the reader is locked out.</div><pre>If the block is unintentional, remove the rule or add:
+
+User-agent: Claude-SearchBot
+Allow: /</pre></div><div class="find high"><h3>HIGH · AI access — robots.txt blocks anthropic-ai (Disallow: /)</h3><div class="why">anthropic-ai cannot read this page at all. Pages invisible to an AI crawler can never be cited, summarized, or recommended by that assistant — ranking is irrelevant if the reader is locked out.</div><pre>If the block is unintentional, remove the rule or add:
+
+User-agent: anthropic-ai
+Allow: /</pre></div><div class="find high"><h3>HIGH · AI access — robots.txt blocks PerplexityBot (Disallow: /)</h3><div class="why">PerplexityBot cannot read this page at all. Pages invisible to an AI crawler can never be cited, summarized, or recommended by that assistant — ranking is irrelevant if the reader is locked out.</div><pre>If the block is unintentional, remove the rule or add:
+
+User-agent: PerplexityBot
+Allow: /</pre></div><div class="find high"><h3>HIGH · AI access — robots.txt blocks Perplexity-User (Disallow: /)</h3><div class="why">Perplexity-User cannot read this page at all. Pages invisible to an AI crawler can never be cited, summarized, or recommended by that assistant — ranking is irrelevant if the reader is locked out.</div><pre>If the block is unintentional, remove the rule or add:
+
+User-agent: Perplexity-User
+Allow: /</pre></div><div class="find high"><h3>HIGH · AI access — robots.txt blocks Google-Extended (Disallow: /)</h3><div class="why">Google-Extended cannot read this page at all. Pages invisible to an AI crawler can never be cited, summarized, or recommended by that assistant — ranking is irrelevant if the reader is locked out.</div><pre>If the block is unintentional, remove the rule or add:
+
+User-agent: Google-Extended
+Allow: /</pre></div><div class="find high"><h3>HIGH · AI access — robots.txt blocks Applebot-Extended (Disallow: /)</h3><div class="why">Applebot-Extended cannot read this page at all. Pages invisible to an AI crawler can never be cited, summarized, or recommended by that assistant — ranking is irrelevant if the reader is locked out.</div><pre>If the block is unintentional, remove the rule or add:
+
+User-agent: Applebot-Extended
+Allow: /</pre></div><div class="find high"><h3>HIGH · AI access — robots.txt blocks CCBot (Disallow: /)</h3><div class="why">CCBot cannot read this page at all. Pages invisible to an AI crawler can never be cited, summarized, or recommended by that assistant — ranking is irrelevant if the reader is locked out.</div><pre>If the block is unintentional, remove the rule or add:
+
+User-agent: CCBot
+Allow: /</pre></div><div class="find high"><h3>HIGH · AI access — robots.txt blocks Bytespider (Disallow: /)</h3><div class="why">Bytespider cannot read this page at all. Pages invisible to an AI crawler can never be cited, summarized, or recommended by that assistant — ranking is irrelevant if the reader is locked out.</div><pre>If the block is unintentional, remove the rule or add:
+
+User-agent: Bytespider
+Allow: /</pre></div><div class="find high"><h3>HIGH · AI access — robots.txt blocks meta-externalagent (Disallow: /)</h3><div class="why">meta-externalagent cannot read this page at all. Pages invisible to an AI crawler can never be cited, summarized, or recommended by that assistant — ranking is irrelevant if the reader is locked out.</div><pre>If the block is unintentional, remove the rule or add:
+
+User-agent: meta-externalagent
+Allow: /</pre></div><div class="find high"><h3>HIGH · AI readability — Raw HTML contains almost no content (8 words) — the page is JS-rendered</h3><div class="why">A rendering fetcher (like TinyFish Fetch) extracts ~555 words, but plain HTTP fetchers — which is what many AI assistants and crawlers still use — receive an empty shell. To those tools this page has nothing to read, quote, or rank.</div><pre>Server-side render or prerender the page (Next.js/Nuxt SSR/SSG, or a prerender service) so the main content is present in the initial HTML response.</pre></div><div class="find medium"><h3>MEDIUM · AI access — No sitemap.xml found</h3><div class="why">AI search indexes and crawlers use the sitemap to discover and refresh pages. Without it, deep pages are found late or not at all.</div><pre>Generate a sitemap (most frameworks have a plugin) and reference it from robots.txt.</pre></div><div class="find medium"><h3>MEDIUM · AI readability — Page has no &lt;h1&gt;</h3><div class="why">The h1 is the strongest topical signal extractors and rankers read; without it, tools fall back to guessing the topic from the title tag alone.</div><pre>Add one h1 that states the page's subject, e.g. &lt;h1&gt;nytimes.com&lt;/h1&gt;</pre></div><div class="find medium"><h3>MEDIUM · Metadata — Missing meta description</h3><div class="why">Search engines and AI tools synthesize their own summary when this is absent — usually worse than one you write, and it becomes the snippet users and assistants judge the page by.</div><pre>&lt;meta name="description" content="One concrete sentence on what this page offers and for whom (under 160 chars)."&gt;</pre></div><div class="find medium"><h3>MEDIUM · Metadata — No structured data (JSON-LD)</h3><div class="why">Schema.org markup is machine-readable ground truth. AI search features and rich results consume it directly; pages without it depend entirely on text inference.</div><pre>&lt;script type="application/ld+json"&gt;{"@context":"https://schema.org","@type":"WebPage","name":"nytimes.com","url":"https://www.nytimes.com/section/technology"}&lt;/script&gt;
+
+Use a more specific @type (Article, Product, FAQPage, SoftwareApplication…) where it fits.</pre></div><div class="find medium"><h3>MEDIUM · Search visibility — Not in the top 5 for target query: "technology news"</h3><div class="why">AI search returns reuters.com, geekwire.com, techcrunch.com for this query instead of nytimes.com. Assistants answering from these results will cite competitors, not you.</div><pre>Make the page the best answer for this exact query: align h1/title with the query phrasing, answer it directly in the first paragraph, add supporting structured data, and earn a few topical links. Readability fixes above compound here — tools can only rank what they can read.</pre></div><div class="find low"><h3>LOW · AI access — No llms.txt</h3><div class="why">llms.txt is an emerging convention that hands AI tools a curated map of your most important content — cheap to add, and early adopters are over-represented in AI answers.</div><pre>Serve /llms.txt — a short markdown file:
+
+# nytimes.com
+&gt; One-line description of the site.
+
+## Key pages
+- [Page name](https://www.nytimes.com/section/technology): what it covers</pre></div><div class="find low"><h3>LOW · Metadata — Missing canonical link</h3><div class="why">Without rel=canonical, URL variants (utm params, trailing slashes) split ranking signal across duplicates.</div><pre>&lt;link rel="canonical" href="https://www.nytimes.com/section/technology"&gt;</pre></div><div class="find low"><h3>LOW · Metadata — No Open Graph tags</h3><div class="why">OG tags control how the page appears when shared — including in AI chat interfaces that unfurl links.</div><pre>&lt;meta property="og:title" …&gt;, &lt;meta property="og:description" …&gt;, &lt;meta property="og:image" …&gt;</pre></div>
+<p style="color:var(--mut);margin-top:40px">Generated by <a href="https://github.com/johnnycool1000/findable">Findable</a>.</p>
+</div></body></html>

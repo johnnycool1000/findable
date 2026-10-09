@@ -89,12 +89,13 @@ Scores: **AI readability**, **AI access**, **Search visibility**, rolled into an
 
 Generated live by this tool (see [`examples/`](examples/)):
 
-| Page | Why it's interesting |
-|---|---|
-| `stripe.com/payments` | Polished SaaS: wins every search query, yet extraction captures only ~35% of the page and there's no JSON-LD |
-| `danluu.com` | Legendary minimal blog: near-perfect content parity, near-zero metadata |
-| `excalidraw.com` | Client-rendered SPA: what AI tools see vs. what the raw HTML contains |
-| `anoptimtomorrow.com/board-room` | A small product page: the long-tail case most site owners are actually in |
+| Page | Score | Why it's interesting |
+|---|---|---|
+| `stripe.com/payments` | 89 (B) | Polished SaaS: ranks #1 for every query in Search, yet the live SERP check finds it absent from the organic top 10 — and extraction captures only ~35% of the page text |
+| `danluu.com` | 82 (B) | Legendary minimal blog: near-perfect content parity (the AI sees everything), near-zero metadata |
+| `excalidraw.com` | 80 (B) | Client-rendered SPA: what AI tools extract vs. what the raw HTML actually contains |
+| `nytimes.com/section/technology` | 49 (D) | **AI access 0/100** — robots.txt blocks all 16 AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended…). A deliberate choice, but it means no AI assistant can ever cite this page |
+| `anoptimtomorrow.com/board-room` | 71 (C) | My own site: the long-tail case most owners are actually in — fine readability, losing every non-brand query |
 
 ## Notes
 
