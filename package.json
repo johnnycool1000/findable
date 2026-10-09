@@ -1,0 +1,29 @@
+{
+  "name": "findable",
+  "version": "1.0.0",
+  "description": "AI-visibility & SEO auditor: checks whether AI search and fetch tools can read your page, where it surfaces in search, and exactly how to fix the gaps. Powered by TinyFish Search, Fetch and Agent.",
+  "type": "module",
+  "bin": {
+    "findable": "./src/cli.js"
+  },
+  "scripts": {
+    "audit": "node src/cli.js",
+    "test": "node test/smoke.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "node-html-parser": "^7.0.1"
+  },
+  "keywords": [
+    "seo",
+    "aeo",
+    "ai-search",
+    "tinyfish",
+    "audit",
+    "llm",
+    "visibility"
+  ],
+  "license": "MIT"
+}
