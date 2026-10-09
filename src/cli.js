@@ -65,7 +65,7 @@ try {
   let serp = null;
   if (args.agent && queries.length) {
     const primary = queries[0].q;
-    step(`Live SERP cross-check via TinyFish Agent (real browser on bing.com) for "${primary}" — takes 1-3 min…`);
+    step(`Live SERP cross-check via TinyFish Agent (real browser search) for "${primary}" — takes 1-3 min…`);
     serp = await liveSerpCheck(key, primary, vis.host);
     if (!serp.ok) step(`Agent check unavailable: ${serp.error} (report proceeds without it)`);
   }
